@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Predictor </title>
+    <title>City = {{ weather.city }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body style="background-color: lightblue">
+    <center><h1 style="font-family:Oswald">WEATHER PREDICTOR</h1>
+        <p style="font-family: Lemon Milk">
+           <h1>City - {{ weather.city }}</h1>
+    <!--<p>Date:{{print_time}}</p>-->
+    <img src="http://openweathermap.org/img/w/{{ weather.icon }}.png">
+    <p>Temperature: {{ weather.temperature }} &#8451;</p>
+    <p>Description: {{ weather.description }}</p>
+    <p>Prediction:{{prediction}}</p>
+    <a href="{{ url_for('index') }}">Search for another city</a>
+    </center>
+</body>
+</html>
